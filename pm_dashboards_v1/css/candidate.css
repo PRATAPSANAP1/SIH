@@ -1,6 +1,11 @@
+/* --- Global Reset and Box Sizing --- */
+* {
+    box-sizing: border-box;
+}
+
 /* --- Overall Page Styling --- */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     background: #f0f2f5;
@@ -48,6 +53,30 @@ a:hover {
     box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
 }
 
+.btn.secondary {
+    background-color: #e9ecef;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn.secondary:hover {
+    background-color: #dee2e6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn.danger {
+    background-color: #dc3545;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2);
+}
+
+.btn.danger:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
 .muted {
     text-align: center;
     font-size: 0.8em;
@@ -55,6 +84,10 @@ a:hover {
 }
 
 .hidden {
+    display: none;
+}
+
+.hidden-file-input {
     display: none;
 }
 
@@ -158,150 +191,6 @@ a:hover {
     text-decoration: none;
 }
 
-.profile-dropdown:hover .dropdown-content {
-    display: block;
-}
-/* --- Utility Classes for Buttons --- */
-.btn.secondary {
-    background-color: #e9ecef;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.btn.secondary:hover {
-    background-color: #dee2e6;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btn.danger {
-    background-color: #dc3545;
-    color: #fff;
-    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2);
-}
-
-.btn.danger:hover {
-    background-color: #c82333;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
-}
-
-.hidden-file-input {
-    display: none;
-}
-
-/* --- Edit Profile Form --- */
-.edit-profile-form {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.edit-profile-form h2 {
-    font-size: 1.8em;
-    font-weight: 600;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #555;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-.edit-profile-form .btn {
-    width: 100%;
-    margin-top: 15px;
-}
-
-/* Profile Photo Upload Section */
-.profile-photo-upload {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.edit-profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #007bff;
-    margin-bottom: 20px;
-}
-
-.photo-actions {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.photo-actions .btn {
-    width: auto;
-    padding: 10px 20px;
-}
-/* ... (existing styles) ... */
-
-/* --- Buttons in the form --- */
-.form-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.form-actions .btn {
-    flex: 1;
-    margin: 0;
-}
-
-.btn.primary {
-    background-color: #007bff;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
-}
-
-.btn.primary:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-}
-
-.btn.secondary {
-    background-color: #e9ecef;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.btn.secondary:hover {
-    background-color: #dee2e6;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-/* ... (rest of the CSS code) ... */
 /* --- Main Content & Form Card --- */
 .main {
     padding: 40px 0;
@@ -339,13 +228,14 @@ a:hover {
     color: #333;
     font-weight: 700;
 }
+
 /* --- Search Bar Container --- */
 .search-bar {
     display: flex;
     align-items: center;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 25px; /* A more rounded look for a modern feel */
+    border-radius: 25px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     padding: 8px 15px;
     width: 100%;
@@ -359,15 +249,13 @@ a:hover {
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
 }
 
-/* --- Search Input and Mic Icon Container --- */
 .search-input-container {
-    display: flex; /* Use Flexbox to align the input and mic icon */
+    display: flex;
     align-items: center;
     flex-grow: 1;
     position: relative;
 }
 
-/* --- Search Input Field --- */
 .search-input {
     border: none;
     outline: none;
@@ -376,7 +264,7 @@ a:hover {
     color: #333;
     flex-grow: 1;
     padding: 5px 10px;
-    padding-right: 35px; /* Make space for the microphone icon */
+    padding-right: 35px;
 }
 
 .search-input::placeholder {
@@ -389,7 +277,6 @@ a:hover {
     color: transparent;
 }
 
-/* --- Microphone Button --- */
 .mic-btn {
     position: absolute;
     right: 5px;
@@ -405,7 +292,6 @@ a:hover {
     color: #007bff;
 }
 
-/* --- Search Button --- */
 .search-btn {
     padding: 10px 20px;
     margin-left: 10px;
@@ -425,7 +311,6 @@ a:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
 }
-
 
 /* Recommended Internships Section */
 .recommended-internships {
@@ -450,6 +335,7 @@ a:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
 }
 
 .internship-card:hover {
@@ -457,41 +343,18 @@ a:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
 .internship-card h3 {
     font-size: 1.4em;
-    margin: 15px 20px 5px;
+    margin: 0 0 5px;
 }
 
 .internship-card p {
     font-size: 0.9em;
     color: #666;
-    padding: 0 20px;
+    margin: 5px 0;
 }
 
-.internship-card .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px 20px 20px;
-    font-size: 0.85em;
-    color: #555;
-    border-top: 1px solid #eee;
-    margin-top: 15px;
-}
-
-.internship-card .meta span {
-    background-color: #f0f2f5;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* --- Edit Profile Form --- */
+/* Edit Profile Form */
 .edit-profile-form {
     background-color: #fff;
     padding: 40px;
@@ -534,11 +397,117 @@ a:hover {
     outline: none;
 }
 
-.edit-profile-form .btn {
-    width: 100%;
+.form-actions {
+    display: flex;
+    gap: 10px;
     margin-top: 15px;
 }
 
+.form-actions .btn {
+    flex: 1;
+    margin: 0;
+}
+
+/* Profile Photo Upload Section */
+.profile-photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.edit-profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin-bottom: 20px;
+}
+
+.photo-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.photo-actions .btn {
+    width: auto;
+    padding: 10px 20px;
+}
+.work-experience-entry {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.work-experience-entry input,
+.work-experience-entry textarea {
+    background-color: #fff;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.edit-profile-form input,
+.edit-profile-form select,
+.edit-profile-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    margin-top: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-profile-form input:focus,
+.edit-profile-form select:focus,
+.edit-profile-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
 /* --- Footer --- */
 .footer {
     text-align: center;
@@ -550,16 +519,133 @@ a:hover {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header adjustments for mobile */
     .site-header .container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .brand {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        flex-direction: row;
     }
 
-    .actions {
-        margin-top: 15px;
+    .title {
+        font-size: 0.9em; /* Reduce font size for space */
     }
+    
+    .actions {
+        width: auto;
+        justify-content: flex-end; /* Align actions to the right */
+        margin-top: 0;
+        gap: 10px; /* Reduce gap for more space */
+    }
+    .user-profile{
+        width: 90%;
+        margin-left: 20px;
+    }
+    .profile-dropdown {
+        flex-grow: 0;
+    }
+    
+    .profile-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Search bar layout */
+    .search-bar {
+        width: 90%;
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 12px;
+        padding: 15px;
+    }
+
+    .search-btn {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .search-input-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Card grid and other sections */
+    .card-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .user-profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .user-profile h1 {
+        font-size: 1.8em;
+        margin-top: 10px;
+    }
+    
+    .profile-photo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Edit profile form adjustments */
+    .edit-profile-form {
+        padding: 20px;
+        width: 90%;
+    }
+    
+    .profile-photo-upload {
+        flex-direction: column;
+    }
+    
+    .edit-profile-photo {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+    
+    .photo-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+    
+    /* General element spacing */
+    .main {
+        padding: 20px 0;
+    }
+    
+    .recommended-internships h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+     #addWorkExperienceBtn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
 }
