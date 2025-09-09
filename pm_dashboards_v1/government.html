@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="governmentDashboardTitle">Government Dashboard</title>
+    <link rel="stylesheet" href="css/government.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo">PM<span>Intern</span></div>
+                <div class="title" data-i18n="headerTitle">PM Internship Recommendation</div>
+            </div>
+            <div class="actions">
+                <div class="profile-dropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="profile-avatar" />
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#" id="logoutBtn" data-i18n="logout">Logout</a>
+                    </div>
+                </div>
+                <select id="langSelect" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" id="overviewLink" class="active" data-i18n="overviewLink">Overview</a></li>
+                <li><a href="#" id="allInternshipsLink" data-i18n="allInternshipsLink">All Internships</a></li>
+                <li><a href="#" id="allCandidatesLink" data-i18n="allCandidatesLink">All Candidates</a></li>
+            </ul>
+        </nav>
+
+        <section class="content-section">
+            <div id="overviewSection" class="content-item">
+                <h2 data-i18n="overviewHeading">Dashboard Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3 data-i18n="totalInternshipsLabel">Total Internships</h3>
+                        <p id="totalInternshipsCount" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 data-i18n="totalCandidatesLabel">Total Candidates</h3>
+                        <p id="totalCandidatesCount" class="stat-number">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 data-i18n="totalApplicationsLabel">Total Applications</h3>
+                        <p id="totalApplicationsCount" class="stat-number">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="allInternshipsSection" class="content-item hidden">
+                <h2 data-i18n="allInternshipsHeading">All Posted Internships</h2>
+                <div class="internships-list" id="allInternshipsList">
+                    </div>
+            </div>
+
+            <div id="allCandidatesSection" class="content-item hidden">
+                <h2 data-i18n="allCandidatesHeading">All Registered Candidates</h2>
+                <div class="candidates-list" id="allCandidatesList">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footerText">© 2025 PM Internship Recommendation — By Team Buildzen.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/government.js"></script>
+</body>
+
+</html>

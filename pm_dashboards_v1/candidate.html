@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title data-i18n="candidateDashboardTitle">Candidate Dashboard</title>
+    <link rel="stylesheet" href="css/candidate.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo">PM<span>Intern</span></div>
+                <div class="title" data-i18n="headerTitle">PM Internship Recommendation</div>
+            </div>
+            <div class="actions">
+                <div class="profile-dropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="css/background.jpg" alt="Profile" class="profile-avatar" />
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#" id="editProfileLink" data-i18n="editProfileLink">Edit Profile</a>
+                        <a href="internships.html" id="internshipsLink" data-i18n="internshipsLink">Internships</a>
+                        <a href="#" id="logoutBtn" data-i18n="logout">Logout</a>
+                    </div>
+                </div>
+                <select id="langSelect" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main">
+        <section class="dashboard-content" id="dashboardContent">
+            <section class="user-profile">
+                <div class="profile-header">
+                    <img src="css/background.jpg" alt="Profile Photo" class="profile-photo" id="mainProfilePhoto" />
+                    <h1 data-i18n="welcomeMessage" data-name="Pratap Sanap">Welcome, Pratap Sanap</h1>
+                </div>
+            </section>
+
+           <section class="search-bar">
+                <div class="search-input-container">
+                    <input type="text" id="searchInput" class="search-input" data-i18n="searchPlaceholder" placeholder="Search by title, company, or location..." />
+                    <button id="micBtn" class="mic-btn">
+                        <i class="fa fa-microphone" style="font-size:30px"></i>
+                    </button>
+                </div>
+                <button id="searchBtn" class="btn primary search-btn" data-i18n="searchBtn">Search</button>
+            </section>
+            <section class="recommended-internships">
+                <h2 data-i18n="recommendedHeading">Recommended Internships</h2>
+                <div class="card-grid" id="internshipCards">
+                </div>
+            </section>
+        </section>
+
+        <section class="edit-profile-form hidden" id="editProfileSection">
+            <h2 data-i18n="editProfileHeading">Edit Profile</h2>
+            <form id="profileForm">
+                <div class="form-group profile-photo-upload">
+                    <img src="css/background.jpg" alt="Profile" class="edit-profile-photo" id="profilePhotoPreview" />
+                    <div class="photo-actions">
+                        <input type="file" id="photoInput" accept="image/*" class="hidden-file-input" />
+                        <button type="button" id="changePhotoBtn" class="btn secondary" data-i18n="changePhotoLabel">Change Photo</button>
+                        <button type="button" id="removePhotoBtn" class="btn danger" data-i18n="removePhotoLabel">Remove Photo</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fullName" data-i18n="fullNameLabel">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required />
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="emailLabel">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="mobile" data-i18n="mobileLabel">Mobile</label>
+                    <input type="tel" id="mobile" name="mobile" required />
+                </div>
+                <div class="form-group">
+                    <label for="stream" data-i18n="streamLabel">Stream/Branch</label>
+                    <input type="text" id="stream" name="stream" required />
+                </div>
+                <div class="form-group">
+                    <label for="passOutYear" data-i18n="passOutYearLabel">Pass Out Year</label>
+                    <input type="number" id="passOutYear" name="passOutYear" required />
+                </div>
+                <div class="form-group">
+                    <label for="skills" data-i18n="skillsLabel">Skills (comma-separated)</label>
+                    <input type="text" id="skills" name="skills" placeholder="e.g., Python, SQL, React" required />
+                </div>
+                <div class="form-group">
+                    <label for="location" data-i18n="locationLabel">Preferred Location</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Bangalore" required />
+                </div>
+                <div class="form-group">
+                    <label for="stipend" data-i18n="stipendLabel">Stipend Expectation</label>
+                    <input type="number" id="stipend" name="stipend" placeholder="e.g., 20000" required />
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary" data-i18n="saveBtn">Save Profile</button>
+                    <button type="button" class="btn secondary" id="cancelEditBtn" data-i18n="cancelBtn">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footerText">© 2025 PM Internship Recommendation — By Team Buildzen.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/candidate.js"></script>
+</body>
+
+</html>

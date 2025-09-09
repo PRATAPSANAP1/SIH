@@ -1,0 +1,1 @@
+PM Internship Dashboards demo. Open index.html to start. Login redirects to role dashboards. Data stored in localStorage. (Demo only)

@@ -1,0 +1,565 @@
+/* --- Overall Page Styling --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* --- Utility Classes --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.muted {
+    text-align: center;
+    font-size: 0.8em;
+    color: #999;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Header Styling --- */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 15px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: #007bff;
+}
+
+.title {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#langSelect {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+/* --- Profile Dropdown --- */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.profile-btn:hover .profile-avatar {
+    border-color: #007bff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+/* --- Utility Classes for Buttons --- */
+.btn.secondary {
+    background-color: #e9ecef;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn.secondary:hover {
+    background-color: #dee2e6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn.danger {
+    background-color: #dc3545;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(220, 53, 69, 0.2);
+}
+
+.btn.danger:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.hidden-file-input {
+    display: none;
+}
+
+/* --- Edit Profile Form --- */
+.edit-profile-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.edit-profile-form h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-profile-form .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Profile Photo Upload Section */
+.profile-photo-upload {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.edit-profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin-bottom: 20px;
+}
+
+.photo-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.photo-actions .btn {
+    width: auto;
+    padding: 10px 20px;
+}
+/* ... (existing styles) ... */
+
+/* --- Buttons in the form --- */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-actions .btn {
+    flex: 1;
+    margin: 0;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn.secondary {
+    background-color: #e9ecef;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn.secondary:hover {
+    background-color: #dee2e6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ... (rest of the CSS code) ... */
+/* --- Main Content & Form Card --- */
+.main {
+    padding: 40px 0;
+}
+
+/* User Profile Section */
+.user-profile {
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.user-profile h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #333;
+    font-weight: 700;
+}
+/* --- Search Bar Container --- */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px; /* A more rounded look for a modern feel */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 8px 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus-within {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+}
+
+/* --- Search Input and Mic Icon Container --- */
+.search-input-container {
+    display: flex; /* Use Flexbox to align the input and mic icon */
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* --- Search Input Field --- */
+.search-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    color: #333;
+    flex-grow: 1;
+    padding: 5px 10px;
+    padding-right: 35px; /* Make space for the microphone icon */
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.search-bar:focus-within .search-input::placeholder {
+    color: transparent;
+}
+
+/* --- Microphone Button --- */
+.mic-btn {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.mic-btn:hover {
+    color: #007bff;
+}
+
+/* --- Search Button --- */
+.search-btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.search-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+
+/* Recommended Internships Section */
+.recommended-internships {
+    margin-bottom: 40px;
+}
+
+.recommended-internships h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.internship-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.internship-card h3 {
+    font-size: 1.4em;
+    margin: 15px 20px 5px;
+}
+
+.internship-card p {
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 20px;
+}
+
+.internship-card .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 10px 20px 20px;
+    font-size: 0.85em;
+    color: #555;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+}
+
+.internship-card .meta span {
+    background-color: #f0f2f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* --- Edit Profile Form --- */
+.edit-profile-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.edit-profile-form h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-profile-form .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    font-size: 0.9em;
+    border-top: 1px solid #eee;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand {
+        margin-bottom: 15px;
+    }
+
+    .actions {
+        margin-top: 15px;
+    }
+}

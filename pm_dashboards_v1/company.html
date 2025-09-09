@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="companyDashboardTitle">Company Dashboard</title>
+    <link rel="stylesheet" href="css/company.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo">PM<span>Intern</span></div>
+                <div class="title" data-i18n="headerTitle">PM Internship Recommendation</div>
+            </div>
+            <div class="actions">
+                <div class="profile-dropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="profile-avatar" />
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="#" id="logoutBtn" data-i18n="logout">Logout</a>
+                    </div>
+                </div>
+                <select id="langSelect" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" id="postInternshipLink" class="active" data-i18n="postInternshipLink">Post Internship</a></li>
+                <li><a href="#" id="viewApplicantsLink" data-i18n="viewApplicantsLink">View Applicants</a></li>
+            </ul>
+        </nav>
+
+        <section class="content-section">
+            <div id="postInternshipSection" class="content-item">
+                <h2 data-i18n="postInternshipHeading">Post a New Internship</h2>
+                <form id="postInternshipForm">
+                    <div class="form-group">
+                        <label for="internshipTitle" data-i18n="internshipTitleLabel">Internship Title</label>
+                        <input type="text" id="internshipTitle" name="internshipTitle" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName" data-i18n="companyNameLabel">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="location" data-i18n="locationLabel">Location</label>
+                        <input type="text" id="location" name="location" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="stipend" data-i18n="stipendLabel">Stipend (per month)</label>
+                        <input type="number" id="stipend" name="stipend" placeholder="e.g., 20000" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="stream" data-i18n="streamLabel">Stream/Branch</label>
+                        <input type="text" id="stream" name="stream" placeholder="e.g., Computer Science, IT" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="eligibility" data-i18n="eligibilityLabel">Eligibility Criteria</label>
+                        <textarea id="eligibility" name="eligibility" rows="3" placeholder="e.g., 60% in B.E./B.Tech, no backlogs" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicationDeadline" data-i18n="applicationDeadlineLabel">Application Deadline</label>
+                        <input type="date" id="applicationDeadline" name="applicationDeadline" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="description" data-i18n="descriptionLabel">Description</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills" data-i18n="skillsLabel">Required Skills (comma-separated)</label>
+                        <input type="text" id="skills" name="skills" placeholder="e.g., Python, SQL, React" required />
+                    </div>
+                    <button type="submit" class="btn primary" data-i18n="postBtn">Post Internship</button>
+                </form>
+            </div>
+
+            <div id="viewApplicantsSection" class="content-item hidden">
+                <h2 data-i18n="viewApplicantsHeading">View Applicants</h2>
+                <div class="applicants-grid" id="applicantsContainer">
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footerText">© 2025 PM Internship Recommendation — By Team Buildzen.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/company.js"></script>
+</body>
+
+</html>

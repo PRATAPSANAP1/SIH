@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f6f9fc;
+    color: #071029
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px
+}
+
+.job {
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    margin-top: 18px
+}
+
+.job h1 {
+    color: #0055A4
+}
+
+.job .meta {
+    color: #6b7280
+}
