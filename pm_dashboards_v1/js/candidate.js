@@ -87,13 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         profileDropdown.style.display = "none";
     });
 
-    // Show Internships (Dashboard) section
-    internshipsLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        editProfileSection.classList.add("hidden");
-        dashboardContent.classList.remove("hidden");
-        profileDropdown.style.display = "none";
-    });
+ 
 
     // Handle search action
     searchBtn.addEventListener("click", () => {
@@ -130,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle photo removal
     removePhotoBtn.addEventListener("click", () => {
-        const defaultPhoto = "https://via.placeholder.com/150";
+        const defaultPhoto = "";
         profilePhotoPreview.src = defaultPhoto;
         mainProfilePhoto.src = defaultPhoto.replace("150", "100");
     });
