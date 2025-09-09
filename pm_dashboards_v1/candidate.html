@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title data-i18n="candidateDashboardTitle">Candidate Dashboard</title>
     <link rel="stylesheet" href="css/candidate.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="container">
             <div class="brand">
                 <div class="logo">PM<span>Intern</span></div>
-                <div class="title" data-i18n="headerTitle">PM Internship Recommendation</div>
+            
             </div>
             <div class="actions">
                 <div class="profile-dropdown">
@@ -74,36 +74,100 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="fullName" data-i18n="fullNameLabel">Full Name</label>
-                    <input type="text" id="fullName" name="fullName" required />
+                    <label>
+                        <span data-i18n="nameLabel">Name</span>
+                        <input id="userName" data-i18n="fullNamePlaceholder" placeholder="full name" required />
+                    </label>
                 </div>
                 <div class="form-group">
-                    <label for="email" data-i18n="emailLabel">Email</label>
-                    <input type="email" id="email" name="email" required />
+                    <label>
+                        <span data-i18n="idLabel">Email or Mobile</span>
+                        <input id="userId" data-i18n="emailMobilePlaceholder" placeholder="email or mobile" required />
+                    </label>
                 </div>
-                <div class="form-group">
-                    <label for="mobile" data-i18n="mobileLabel">Mobile</label>
-                    <input type="tel" id="mobile" name="mobile" required />
-                </div>
-                <div class="form-group">
-                    <label for="stream" data-i18n="streamLabel">Stream/Branch</label>
-                    <input type="text" id="stream" name="stream" required />
-                </div>
-                <div class="form-group">
-                    <label for="passOutYear" data-i18n="passOutYearLabel">Pass Out Year</label>
-                    <input type="number" id="passOutYear" name="passOutYear" required />
-                </div>
-                <div class="form-group">
-                    <label for="skills" data-i18n="skillsLabel">Skills (comma-separated)</label>
-                    <input type="text" id="skills" name="skills" placeholder="e.g., Python, SQL, React" required />
-                </div>
-                <div class="form-group">
-                    <label for="location" data-i18n="locationLabel">Preferred Location</label>
-                    <input type="text" id="location" name="location" placeholder="e.g., Bangalore" required />
-                </div>
-                <div class="form-group">
-                    <label for="stipend" data-i18n="stipendLabel">Stipend Expectation</label>
-                    <input type="number" id="stipend" name="stipend" placeholder="e.g., 20000" required />
+
+                <div id="candidateFields">
+                    <h3 class="form-section-heading" data-i18n="professionalDetails">Professional Details</h3>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="resumeUploadLabel">Upload Resume/CV (PDF only)</span>
+                            <input type="file" id="resumeUpload" accept=".pdf" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="portfolioUrlLabel">Portfolio/LinkedIn URL</span>
+                            <input type="url" id="portfolioUrl" placeholder="e.g., https://linkedin.com/in/username" />
+                        </label>
+                    </div>
+
+                    <h3 class="form-section-heading" data-i18n="educationalBackground">Educational Background</h3>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="educationLevelLabel">Education Level</span>
+                            <select id="educationLevel">
+                                <option value="">Select Level</option>
+                                <option value="10th">10th Pass</option>
+                                <option value="12th">12th Pass</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="graduate">Graduate</option>
+                                <option value="postgraduate">Postgraduate</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="universityLabel">University/College</span>
+                            <input type="text" id="university" placeholder="e.g., University of Mumbai" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="majorLabel">Major/Field of Study</span>
+                            <input type="text" id="major" placeholder="e.g., Computer Science" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="graduationYearLabel">Year of Graduation</span>
+                            <input type="number" id="graduationYear" placeholder="e.g., 2025" min="1900" max="2100" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="stream" data-i18n="streamLabel">Stream/Branch</label>
+                        <input type="text" id="stream" name="stream" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="passOutYear" data-i18n="passOutYearLabel">Pass Out Year</label>
+                        <input type="number" id="passOutYear" name="passOutYear" required />
+                    </div>
+
+                    <h3 class="form-section-heading" data-i18n="skillsAndInterests">Skills and Interests</h3>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="skillsInputLabel">Your Skills (comma-separated)</span>
+                            <input type="text" id="skills" placeholder="e.g., Python, Data Analysis, HTML, CSS" />
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="stipend" data-i18n="stipendLabel">Stipend Expectation</label>
+                        <input type="number" id="stipend" name="stipend" placeholder="e.g., 20000" required />
+                    </div>
+                   
+
+                    <h3 class="form-section-heading" data-i18n="workExperienceLabel">Work Experience</h3>
+                    <div id="workExperienceContainer">
+                       
+                    </div>
+                    <button type="button" id="addWorkExperienceBtn" class="btn secondary">Add New Experience</button>
+ <br><br>
+                    <div class="form-group">
+                        <label>
+                            <span data-i18n="locationPreferenceLabel">Location Preference</span>
+                            <input type="text" id="locationPreference" placeholder="e.g., Pune, Bengaluru" />
+                        </label>
+                    </div>
+                   
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn primary" data-i18n="saveBtn">Save Profile</button>
