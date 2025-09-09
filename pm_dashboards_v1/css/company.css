@@ -308,19 +308,21 @@ a:hover {
 .footer {
     text-align: center;
     padding: 20px 0;
-    color: #999;
+    color: #1c1a1a;
     font-size: 0.9em;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #afabab;
 }
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
     .main {
         flex-direction: column;
+       
     }
 
     .sidebar {
-        width: 100%;
+        width: 80%;
+        margin-left: 13px;
         margin-bottom: 20px;
     }
 
@@ -335,6 +337,8 @@ a:hover {
 
     .content-section {
         padding: 20px;
+        margin-left: 15px;
+        width: 80%;
     }
 
     .applicants-grid {
