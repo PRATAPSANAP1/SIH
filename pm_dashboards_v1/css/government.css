@@ -244,7 +244,7 @@ a:hover {
 }
 
 .stat-card {
-    background-color: #f8f9fa;
+    background-color: #1778d8;
     border-radius: 12px;
     padding: 25px;
     text-align: center;
@@ -254,13 +254,13 @@ a:hover {
 .stat-card h3 {
     margin: 0 0 10px 0;
     font-size: 1.1em;
-    color: #555;
+    color: #ececec;
 }
 
 .stat-number {
     font-size: 3em;
     font-weight: 700;
-    color: #007bff;
+    color: #f4f6f8;
     margin: 0;
 }
 
@@ -316,7 +316,8 @@ a:hover {
     }
 
     .sidebar {
-        width: 100%;
+        width: 91%;
+        margin-left: 20px;
         margin-bottom: 20px;
     }
 
@@ -331,5 +332,7 @@ a:hover {
 
     .content-section {
         padding: 20px;
+        width: 90%;
+        margin-left: 20px;
     }
 }
