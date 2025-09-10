@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="governmentDashboardTitle">Government Dashboard</title>
     <link rel="stylesheet" href="css/government.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
     <header class="site-header">
         <div class="container">
@@ -20,7 +19,7 @@
                         <img src="css/background.jpg" alt="Profile" class="profile-avatar" />
                     </button>
                     <div class="dropdown-content" id="profileDropdown">
-                        <a href="#" id="logoutBtn" data-i18n="logout">Logout</a>
+                        <a href="login.html" id="logoutBtn" data-i18n="logout">Logout</a>
                     </div>
                 </div>
                 <select id="langSelect" aria-label="Language">
@@ -32,53 +31,201 @@
         </div>
     </header>
 
-    <main class="container main">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#" id="overviewLink" class="active" data-i18n="overviewLink">Overview</a></li>
-                <li><a href="#" id="allInternshipsLink" data-i18n="allInternshipsLink">All Internships</a></li>
-                <li><a href="#" id="allCandidatesLink" data-i18n="allCandidatesLink">All Candidates</a></li>
-            </ul>
-        </nav>
+    <main class="main-content">
+        <div class="main-header">
+            <div class="main-title">
+                <h2 data-i18n="governmentDashboardTitle">Government Dashboard</h2>
+                <p data-i18n="monitorScheme">Monitor the progress and performance of PM Internship Scheme</p>
+            </div>
+        </div>
 
-        <section class="content-section">
-            <div id="overviewSection" class="content-item">
-                <h2 data-i18n="overviewHeading">Dashboard Overview</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h3 data-i18n="totalInternshipsLabel">Total Internships</h3>
-                        <p id="totalInternshipsCount" class="stat-number">0</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 data-i18n="totalCandidatesLabel">Total Candidates</h3>
-                        <p id="totalCandidatesCount" class="stat-number">0</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3 data-i18n="totalApplicationsLabel">Total Applications</h3>
-                        <p id="totalApplicationsCount" class="stat-number">0</p>
-                    </div>
+        <section class="kpi-section">
+            <div class="kpi-card internships">
+                <span class="kpi-icon material-icons">work</span>
+                <div class="kpi-info">
+                    <h3>15,847</h3>
+                    <p data-i18n="totalInternships">Total Internships</p>
+                    <span class="change-info">+12% this month</span>
                 </div>
             </div>
-
-            <div id="allInternshipsSection" class="content-item hidden">
-                <h2 data-i18n="allInternshipsHeading">All Posted Internships</h2>
-                <div class="internships-list" id="allInternshipsList">
-                    </div>
+            <div class="kpi-card companies">
+                <span class="kpi-icon material-icons">business</span>
+                <div class="kpi-info">
+                    <h3>2,456</h3>
+                    <p data-i18n="activeCompanies">Active Companies</p>
+                    <span class="change-info">+8% this month</span>
+                </div>
             </div>
-
-            <div id="allCandidatesSection" class="content-item hidden">
-                <h2 data-i18n="allCandidatesHeading">All Registered Candidates</h2>
-                <div class="candidates-list" id="allCandidatesList">
-                    </div>
+            <div class="kpi-card students">
+                <span class="kpi-icon material-icons">person_add</span>
+                <div class="kpi-info">
+                    <h3>89,234</h3>
+                    <p data-i18n="registeredStudents">Registered Students</p>
+                    <span class="change-info">+15% this month</span>
+                </div>
+            </div>
+            <div class="kpi-card placements">
+                <span class="kpi-icon material-icons">emoji_events</span>
+                <div class="kpi-info">
+                    <h3>12,678</h3>
+                    <p data-i18n="successfulPlacements">Successful Placements</p>
+                    <span class="change-info">+22% this month</span>
+                </div>
             </div>
         </section>
+
+        <div class="content-body">
+            <div class="left-panel">
+                <section class="state-performance">
+                    <div class="section-header">
+                        <h3 data-i18n="statewisePerformance">State-wise Performance</h3>
+                    </div>
+                    <div class="state-cards-container">
+                        <div class="state-card">
+                            <div class="state-header">
+                                <div class="state-info">
+                                    <span class="material-icons">location_on</span>
+                                    <h4>Maharashtra</h4>
+                                </div>
+                                <span class="state-progress-label">95%</span>
+                            </div>
+                            <div class="prog">
+                                <p class="state-metrics">2843 Internships &middot; 15672 Students</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="state-card">
+                            <div class="state-header">
+                                <div class="state-info">
+                                    <span class="material-icons">location_on</span>
+                                    <h4>Karnataka</h4>
+                                </div>
+                                <span class="state-progress-label">72%</span>
+                            </div>
+                            <div class="prog">
+                                <p class="state-metrics">2156 Internships &middot; 12893 Students</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 72%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="state-card">
+                            <div class="state-header">
+                                <div class="state-info">
+                                    <span class="material-icons">location_on</span>
+                                    <h4>Tamil Nadu</h4>
+                                </div>
+                                <span class="state-progress-label">66%</span>
+                            </div>
+                            <div class="prog">
+                                <p class="state-metrics">1987 Internships &middot; 11456 Students</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 66%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="state-card">
+                            <div class="state-header">
+                                <div class="state-info">
+                                    <span class="material-icons">location_on</span>
+                                    <h4>Gujarat</h4>
+                                </div>
+                                <span class="state-progress-label">55%</span>
+                            </div>
+                            <div class="prog">
+                                <p class="state-metrics">1654 Internships &middot; 9876 Students</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 55%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="state-card">
+                            <div class="state-header">
+                                <div class="state-info">
+                                    <span class="material-icons">location_on</span>
+                                    <h4>Uttar Pradesh</h4>
+                                </div>
+                                <span class="state-progress-label">48%</span>
+                            </div>
+                            <div class="prog">
+                                <p class="state-metrics">1432 Internships &middot; 8765 Students</p>
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 48%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="recent-activities">
+                    <h3 data-i18n="recentActivities">Recent Activities</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <span class="material-icons activity-icon">assignment</span>
+                            <div class="activity-details">
+                                <h4 data-i18n="newCompany">Infosys Ltd registered as new partner company</h4>
+                                <p><span data-i18n="2Hours">2</span> <span data-i18n="hoursAgo">hours ago</span></p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="material-icons activity-icon">description</span>
+                            <div class="activity-details">
+                                <h4 data-i18n="newApplications">450 new applications received today</h4>
+                                <p><span data-i18n="4Hours">4</span> <span data-i18n="hoursAgo">hours ago</span></p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <span class="material-icons activity-icon">update</span>
+                            <div class="activity-details">
+                                <h4 data-i18n="internshipStipend">Internship stipend policy updated</h4>
+                                <p><span data-i18n="1Day">1</span> <span data-i18n="dayAgo">day ago</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="right-sidebar">
+                <div class="card policy-status">
+                    <h3 data-i18n="policyStatus">Policy Status</h3>
+                    <ul>
+                        <li><span data-i18n="minimumStipend">Minimum Stipend</span> <span>₹5,000</span></li>
+                        <li><span data-i18n="maximumDuration">Maximum Duration</span> <span>12 months</span></li>
+                        <li><span data-i18n="eligibilityRequirements">Eligibility Requirements</span> <span data-i18n="active">Active</span></li>
+                    </ul>
+                    <button class="btn btn-modify" data-i18n="modifyPolicies">Modify Policies</button>
+                </div>
+
+                <div class="card approval-queue">
+                    <h3 data-i18n="approvalQueue">Approval Queue</h3>
+                    <br>
+                    <div class="queue-item new-company">
+                        <h4 data-i18n="newCompanyApplications">New Company Applications</h4>
+                        <p>23 <span data-i18n="pending">pending</span></p>
+                        <button class="btn btn-review" data-i18n="review">Review</button>
+                    </div>
+                    <div class="queue-item internship-postings">
+                        <h4 data-i18n="internshipPostings">Internship Postings</h4>
+                        <p>47 <span data-i18n="pending">pending</span></p>
+                        <button class="btn btn-verify" data-i18n="verify">Verify</button>
+                    </div>
+                </div>
+
+                <div class="card quick-actions">
+                    <h3 data-i18n="quickActions">Quick Actions</h3>
+                    <ul>
+                        <li><span class="material-icons">assignment</span> <span data-i18n="generateMonthlyReport">Generate Monthly Report</span></li>
+                        <li><span class="material-icons">send</span> <span data-i18n="sendAlerts">Send Alerts</span></li>
+                        <li><span class="material-icons">group</span> <span data-i18n="userManagement">User Management</span></li>
+                        <li><span class="material-icons">bar_chart</span> <span data-i18n="viewAnalytics">View Analytics</span></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
     </main>
-
-
-
-    <script src="js/data.js"></script>
-    <script src="js/common.js"></script>
     <script src="js/government.js"></script>
+    <script src="js/common.js"></script>
 </body>
-
 </html>
