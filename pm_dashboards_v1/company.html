@@ -20,9 +20,14 @@
                 <option value="mr">मराठी</option>
             </select>
             <div class="company-name">Tech Solutions Pvt Ltd</div>
-            <div class="profile-icon">
-                <img src="placeholder-profile.jpg" alt="Profile">
-            </div>
+            <div class="profile-dropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="css/background.jpg" alt="Profile" class="profile-avatar" />
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                         <a href="login.html" data-i18n="logoutBtn">Logout</a>
+                    </div>
+                </div>
         </nav>
     </div>
 </header>
@@ -79,6 +84,8 @@
                         <input type="text" id="skills" name="skills" placeholder="e.g., Python, SQL, React" required />
                     </div>
                     <button type="submit" class="btn primary" data-i18n="postBtn">Post Internship</button>
+                      <button type="button" class="btn btn-secondary cancel-btn" data-i18n="cancel-btn">Cancel</button>
+
                 </form>
         </div>
     </section>
@@ -126,7 +133,6 @@
             <section class="your-internships card">
                 <div class="card-header">
                     <h2 data-i18n="yourInternships">Your Internships</h2>
-                    <a href="#" class="view-all" data-i18n="viewAll">View All</a>
                 </div>
                 <div class="internship-list">
                     <div class="internship-item">
