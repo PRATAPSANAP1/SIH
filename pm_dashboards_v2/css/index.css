@@ -418,16 +418,18 @@ body {
     font-weight: 600;
 }
 
-/* Footer Styles */
 .footer {
+    background-color: #004080;
+    color: white;
     text-align: center;
-    padding: 25px 0;
-    background: #343a40;
-    color: #e9ecef;
-    margin-top: 50px;
-    font-size: 0.9rem;
+    padding: 20px 0;
+    margin-top: auto;
 }
 
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
 /* Mobile Navigation Toggle */
 .toggle-Link {
     display: none;

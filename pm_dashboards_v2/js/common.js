@@ -255,7 +255,7 @@ const translations = {
     totalInternships: "Total Internships",
     activeCompanies: "Active Companies",
     registeredStudents: "Registered Students",
-    successfulPlacements: "Successful Placements",
+    successfulPlacements: "Successful Internship",
     statewisePerformance: "State-wise Performance",
     recentActivities: "Recent Activities",
     policyStatus: "Policy Status",

@@ -154,14 +154,17 @@ a:hover {
 }
 
 .footer {
+    background-color: #004080;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    color: #999;
-    font-size: 0.9em;
-    border-top: 1px solid #eee;
+    margin-top: auto;
 }
 
-
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
 .dropdown, .ministry {
     display: flex;
     align-items: center;

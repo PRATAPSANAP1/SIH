@@ -188,13 +188,17 @@ a:hover {
     font-size: 0.9em;
 }
 
-/* --- Footer --- */
 .footer {
+    background-color: #004080;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    color: #999;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
     font-size: 0.9em;
-    border-top: 1px solid #eee;
 }
 
 @media (max-width: 768px) {

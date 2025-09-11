@@ -1,38 +1,321 @@
-/* Import global styles from candidate.css to ensure consistency */
-@import url("candidate.css");
-
-/* Unique styles for the 'My Internships' page */
-.internships-content {
-    padding-top: 50px;
-    padding-bottom: 50px;
+/* General & Reset from shared code */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: #1866f2;
+}
+.profilebtn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    justify-content: center;
+    gap: 8px;
+}
+.profilebtn:hover {
+    background: #1558cc;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* --- Utility Classes from shared code --- */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-primary {
+    background: #1866f2;
+    color: white;
+}
+.btn-primary:hover {
+    background: #1558cc;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-link {
+    background: none;
+    border: none;
+    color: #1866f2;
+    padding: 0;
+    font-weight: 600;
+    font-size: 13px;
+}
+.btn-link:hover {
+    text-decoration: underline;
+}
+.btn-secondary {
+    background: #eef3f8;
+    color: #1866f2;
+}
+.btn-secondary:hover {
+    background: #e0eaf3;
+}
+.btn-danger {
+    background: #fadad9;
+    color: #c34949;
+}
+.btn-danger:hover {
+    background: #f8c9c6;
+}
+.hidden {
+    display: none !important;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    top: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- Header from shared code --- */
+.site-header {
+    background: #ffffff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header .brand {
+    font-weight: 700;
+    font-size: 24px;
+    color: #1877f2;
+}
+.site-header .brand span {
+    color: #333;
+}
+.site-header .logo {
+    display: flex;
+    align-items: center;
+}
+.site-header .logo span {
+    font-weight: 400;
+    color: #333;
+    margin-left: 5px;
+}
+.site-header .actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.profile-dropdown {
+    position: relative;
+}
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1866f2;
+}
+.site-header select {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* --- Main Container & Layout --- */
+.main {
+    flex-grow: 1;
+    padding: 30px 20px;
+}
+.internships-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
 .internships-content h1 {
-    text-align: center;
     font-size: 2.5em;
     font-weight: 700;
     color: #004080;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 .internships-content p {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 30px;
     font-size: 1.1em;
-    color: #555;
-}
-
-.empty-state-message {
+    color: #888;
     text-align: center;
-    padding: 50px 0;
-    font-size: 1.2em;
-    color: #777;
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.internship-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.internship-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
     padding: 20px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.internship-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #004080;
+    margin: 0 0 5px;
+}
+
+.company-name {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-body p {
+    margin: 0 0 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card-body p i {
+    margin-right: 8px;
+    color: #004080;
+}
+
+.card-footer {
+    padding: 15px 20px;
+    background-color: #f7f9fc;
+    text-align: right;
+    border-top: 1px solid #e1e4e8;
+}
+
+.internship-status {
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #00a080;
+    font-size: 0.8em;
+}
+
+.empty-state-message {
+    padding: 80px 20px;
+    font-size: 1.2em;
+    color: #888;
+    text-align: center;
+}
+
+.footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.dropdown-content.show {
+    display: block;
+}
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brand {
+        width: 100%;
+        text-align: center;
+    }
+
+    .actions {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: -40px;
+    }
+
+    .profile-dropdown {
+        margin-left: auto;
+    }
+
+    .internships-content h1 {
+        font-size: 2em;
+    }
+
+    .internships-content p {
+        font-size: 1em;
+    }
 }

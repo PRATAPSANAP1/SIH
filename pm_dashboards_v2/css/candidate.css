@@ -419,10 +419,16 @@ a {
     margin-bottom: 15px;
 }
 .footer {
+    background-color: #004080;
+    color: white;
     text-align: center;
-    padding: 20px;
-    color: #777;
-    background: #e0e6eb;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
 }
 
 /* --- Profile View Section --- */
