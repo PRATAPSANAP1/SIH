@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="companyDashboardTitle">Company Dashboard</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/company.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="logo">PM<span>Intern</span></div>
+        <nav class="header-nav">
+          <select id="langSelect" aria-label="Language">
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="mr">मराठी</option>
+            </select>
+            <div class="company-name">Tech Solutions Pvt Ltd</div>
+            <div class="profile-dropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="css/background.jpg" alt="Profile" class="profile-avatar" />
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                         <a href="login.html" data-i18n="logoutBtn">Logout</a>
+                    </div>
+                </div>
+        </nav>
+    </div>
+</header>
+
+<main class="dashboard-main">
+    <div class="dashboard-header">
+        <div class="dashboard-title">
+            <h1 data-i18n="companyDashboardTitle">Company Dashboard</h1>
+            <p data-i18n="manageDescription">Manage your internship postings and applications</p>
+        </div>
+        <button class="new-internship-btn" data-i18n="postNewInternship">
+            <span class="material-icons">add</span>
+            Post New Internship
+        </button>
+    </div>
+  <section class="add-internship-form" style="display: none;">
+        <div class="card">
+            <h2 data-i18n="postNewInternship">Post New Internship</h2>
+             <form id="postInternshipForm">
+                    <div class="form-group">
+                        <label for="internshipTitle" data-i18n="internshipTitleLabel">Internship Title</label>
+                        <input type="text" id="internshipTitle" name="internshipTitle" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="companyName" data-i18n="companyNameLabel">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="location" data-i18n="locationLabel">Location</label>
+                        <input type="text" id="location" name="location" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="stipend" data-i18n="stipendLabel">Stipend (per month)</label>
+                        <input type="number" id="stipend" name="stipend" placeholder="e.g., 20000" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="stream" data-i18n="streamLabel">Stream/Branch</label>
+                        <input type="text" id="stream" name="stream" placeholder="e.g., Computer Science, IT" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="eligibility" data-i18n="eligibilityLabel">Eligibility Criteria</label>
+                        <textarea id="eligibility" name="eligibility" rows="3" placeholder="e.g., 60% in B.E./B.Tech, no backlogs" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="applicationDeadline" data-i18n="applicationDeadlineLabel">Application Deadline</label>
+                        <input type="date" id="applicationDeadline" name="applicationDeadline" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="description" data-i18n="descriptionLabel">Description</label>
+                        <textarea id="description" name="description" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills" data-i18n="skillsLabel">Required Skills (comma-separated)</label>
+                        <input type="text" id="skills" name="skills" placeholder="e.g., Python, SQL, React" required />
+                    </div>
+                    <button type="submit" class="btn primary" data-i18n="postBtn">Post Internship</button>
+                      <button type="button" class="btn btn-secondary cancel-btn" data-i18n="cancel-btn">Cancel</button>
+
+                </form>
+        </div>
+    </section>
+    <section class="kpi-section">
+        <div class="kpi-card">
+            <div class="kpi-icon active-internships">
+                <span class="material-icons">work</span>
+            </div>
+            <div class="kpi-info">
+                <h3>3</h3>
+                <p data-i18n="activeInternships">Active Internships</p>
+            </div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-icon total-applications">
+                <span class="material-icons">assignment</span>
+            </div>
+            <div class="kpi-info">
+                <h3>105</h3>
+                <p data-i18n="totalApplications">Total Applications</p>
+            </div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-icon shortlisted">
+                <span class="material-icons">person_add</span>
+            </div>
+            <div class="kpi-info">
+                <h3>19</h3>
+                <p data-i18n="shortlisted">Shortlisted</p>
+            </div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-icon rating">
+                <span class="material-icons">star</span>
+            </div>
+            <div class="kpi-info">
+                <h3>4.8</h3>
+                <p data-i18n="companyRating">Company Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="dashboard-content">
+        <div class="left-panel">
+            <section class="your-internships card">
+                <div class="card-header">
+                    <h2 data-i18n="yourInternships">Your Internships</h2>
+                </div>
+                <div class="internship-list">
+                    <div class="internship-item">
+                        <div class="item-details">
+                            <h4 data-i18n="softwareDeveloperIntern">Software Developer Intern</h4>
+                            <p class="role" data-i18n="technology">Technology</p>
+                            <p class="stats" data-i18n="softwareStats">45 Applications · 8 Shortlisted · Posted: 2024-01-10</p>
+                        </div>
+                        <span class="status active" data-i18n="statusActive">Active</span>
+                        <span class="material-icons more-vert">more_vert</span>
+                    </div>
+                    <div class="internship-item">
+                        <div class="item-details">
+                            <h4 data-i18n="marketingIntern">Marketing Intern</h4>
+                            <p class="role" data-i18n="marketing">Marketing</p>
+                            <p class="stats" data-i18n="marketingStats">32 Applications · 5 Shortlisted · Posted: 2024-01-08</p>
+                        </div>
+                        <span class="status active" data-i18n="statusActive">Active</span>
+                        <span class="material-icons more-vert">more_vert</span>
+                    </div>
+                    <div class="internship-item">
+                        <div class="item-details">
+                            <h4 data-i18n="hrIntern">HR Intern</h4>
+                            <p class="role" data-i18n="humanResources">Human Resources</p>
+                            <p class="stats" data-i18n="hrStats">28 Applications · 6 Shortlisted · Posted: 2024-01-05</p>
+                        </div>
+                        <span class="status closed" data-i18n="statusClosed">Closed</span>
+                        <span class="material-icons more-vert">more_vert</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-applications card">
+                <div class="card-header">
+                    <h2 data-i18n="recentApplications">Recent Applications</h2>
+                </div>
+                <div class="application-list">
+                    <div class="application-item">
+                        <div class="applicant-info">
+                            <div class="avatar">
+                                <img src="placeholder-avatar.jpg" alt="Priya Sharma">
+                            </div>
+                            <div class="details">
+                                <h3 data-i18n="priyaSharmaName">Priya Sharma</h3>
+                                <p class="role" data-i18n="softwareDeveloperIntern">Software Developer Intern</p>
+                                <p class="college" data-i18n="btechCse">B.Tech CSE</p>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <span class="match-score high-match" data-i18n="match92">92% Match</span>
+                            <span class="date">2024-01-15</span>
+                            <button class="view-btn" data-i18n="viewButton">View</button>
+                        </div>
+                    </div>
+                    <div class="application-item">
+                        <div class="applicant-info">
+                            <div class="avatar">
+                                <img src="placeholder-avatar.jpg" alt="Amit Kumar">
+                            </div>
+                            <div class="details">
+                                <h3 data-i18n="amitKumarName">Amit Kumar</h3>
+                                <p class="role" data-i18n="marketingIntern">Marketing Intern</p>
+                                <p class="college" data-i18n="mbaMarketing">MBA Marketing</p>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <span class="match-score high-match" data-i18n="match88">88% Match</span>
+                            <span class="date">2024-01-14</span>
+                            <button class="view-btn" data-i18n="viewButton">View</button>
+                        </div>
+                    </div>
+                    <div class="application-item">
+                        <div class="applicant-info">
+                            <div class="avatar">
+                                <img src="placeholder-avatar.jpg" alt="Sneha Patel">
+                            </div>
+                            <div class="details">
+                                <h3 data-i18n="snehaPatelName">Sneha Patel</h3>
+                                <p class="role" data-i18n="hrIntern">HR Intern</p>
+                                <p class="college" data-i18n="maPsychology">MA Psychology</p>
+                            </div>
+                        </div>
+                        <div class="application-stats">
+                            <span class="match-score high-match" data-i18n="match85">85% Match</span>
+                            <span class="date">2024-01-13</span>
+                            <button class="view-btn" data-i18n="viewButton">View</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <aside class="right-panel">
+            <div class="company-profile card">
+                <h2 data-i18n="companyProfile">Company Profile</h2>
+                <p data-i18n="companyName">Company: <span>Tech Solutions Pvt Ltd</span></p>
+                <p data-i18n="industry">Industry: <span>Information Technology</span></p>
+                <p data-i18n="location">Location: <span>Mumbai, Maharashtra</span></p>
+                <button class="edit-profile-btn" data-i18n="editProfileButton">Edit Profile</button>
+            </div>
+
+            <div class="quick-actions card">
+                <h2 data-i18n="quickActions">Quick Actions</h2>
+                <ul>
+                    <li data-i18n="postNewInternshipAction"><span class="material-icons">add</span> Post New Internship</li>
+                    <li data-i18n="searchCandidates"><span class="material-icons">search</span> Search Candidates</li>
+                    <li data-i18n="viewReports"><span class="material-icons">bar_chart</span> View Reports</li>
+                    <li data-i18n="settings"><span class="material-icons">settings</span> Settings</li>
+                </ul>
+            </div>
+
+            <div class="performance card">
+                <h2 data-i18n="performance">Performance</h2>
+                <div class="performance-stats">
+                    <p data-i18n="applicationsThisMonth">Applications this month <span>67</span></p>
+                    <p data-i18n="avgMatchRate">Avg. Match Rate <span>88%</span></p>
+                    <p data-i18n="responseRate">Response Rate <span>92%</span></p>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<script src="js/company.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

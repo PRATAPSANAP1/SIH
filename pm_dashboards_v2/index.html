@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title data-i18n="homeTitle">PM Intern</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="mainOverlay" class="overlay"></div>
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo">PM<span>Intern</span></div>
+                <div class="title" data-i18n="headerTitle">PM Internship Recommendation</div>
+            </div>
+            <div class="actions">
+  <!-- Hamburger -->
+  <div class="toggle-Link" id="toggle-Link">&#9776;</div>
+
+  <!-- Mobile Navigation -->
+  <nav class="nav" id="nav-menu">
+      <a href="#home" class="nav-link active" data-i18n="homeLink">Home</a>
+      <a href="#about-us" class="nav-link" data-i18n="aboutLink">About Us</a>
+      <a href="#help" class="nav-link" data-i18n="helpLink">Help</a>
+      <a href="login.html" class="nav-link btn small" data-i18n="loginLink">Login</a>
+      <a href="register.html" class="nav-link btn small" data-i18n="registerLink">Register</a>
+  </nav>
+
+  <!-- Language Selector -->
+  <select id="langSelect" aria-label="Language" class="language-changer">
+      <option value="en">English</option>
+      <option value="hi">हिन्दी</option>
+      <option value="mr">मराठी</option>
+  </select>
+</div>
+
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1 data-i18n="heroHeading">Your Dream Internship Awaits.</h1>
+                <p data-i18n="heroText">We connect students with the best internship opportunities using smart, personalized matching technology.</p>
+                <div class="hero-buttons">
+                    <a href="register.html" class="btn primary" data-i18n="getStartedBtn">Get Started</a>
+                    <a href="#about-us" class="btn secondary" data-i18n="learnMoreBtn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about-us">
+            <h1 data-i18n="aboutHeroHeading">About PM Internship Recommendation</h1>
+            <p data-i18n="aboutHeroText">
+                Our mission is to bridge the gap between students and the best internship opportunities. We use smart technology to match your skills and preferences with relevant internships, making your search fast and effective.
+            </p>
+            <div class="mission-section">
+                <h2 data-i18n="missionHeading">Our Mission</h2>
+                <p data-i18n="missionText">
+                    We believe that every student deserves access to a meaningful and relevant internship experience. Our platform is designed to cut through the noise of endless job boards and present you with a curated list of opportunities that truly fit your profile. By providing personalized recommendations, we empower you to take the next step in your career with confidence.
+                </p>
+            </div>
+            <div class="features-section">
+                <h2 data-i18n="featuresHeading">Key Features</h2>
+                <div class="feature-list">
+                    <div class="feature-card">
+                        <i class="fas fa-search"></i>
+                        <h3 data-i18n="feature1Heading">Personalized Search</h3>
+                        <p data-i18n="feature1Text">Our algorithm learns your skills and preferences to show you internships that are the perfect match.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-filter"></i>
+                        <h3 data-i18n="feature2Heading">Advanced Filtering</h3>
+                        <p data-i18n="feature2Text">Filter internships by location, stipend, sector, and more to narrow down your choices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-star"></i>
+                        <h3 data-i18n="feature3Heading">Curated Recommendations</h3>
+                        <p data-i18n="feature3Text">Get top-rated internships handpicked by our team to ensure quality and relevance.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="help-section" id="help">
+            <h1 data-i18n="helpHeroHeading">Help & Support</h1>
+            <p data-i18n="helpHeroText">Find answers to the most common questions about our platform.</p>
+            <div class="faq-section">
+                <h2 data-i18n="faqHeading">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="faq1Question">
+                            How does the internship recommendation work?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer" data-i18n="faq1Answer">
+                            Our platform uses an algorithm that analyzes your profile information, including skills, stream, and preferences, to match you with the most suitable internships.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="faq2Question">
+                            Can I update my profile after registering?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer" data-i18n="faq2Answer">
+                            Yes, you can edit your profile at any time from your candidate dashboard to update your personal details, skills, and preferences.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="faq3Question">
+                            Is this a final application portal?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer" data-i18n="faq3Answer">
+                            No, this is a prototype platform for internship recommendations only. The final application process will take place on the respective companies' official portals, which will be linked in the internship details.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" data-i18n="faq4Question">
+                            What if I encounter an issue or have a suggestion?
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer" data-i18n="faq4Answer">
+                            We welcome your feedback! You can reach us through our contact form or by emailing us at support@pmintern.com.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-section">
+                <h2 data-i18n="contactHeading">Contact Us</h2>
+                <p data-i18n="contactText">
+                    Can't find what you're looking for? Reach out to us directly.
+                </p>
+                <a href="mailto:support@pmintern.com" class="btn primary" data-i18n="contactBtn">Send us an Email</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footerText">© 2025 PM Internship Recommendation — By Team Buildzen.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

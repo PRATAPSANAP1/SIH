@@ -1,0 +1,440 @@
+/* General Body and Layout */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-main {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+#langSelect {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+    color: #212529;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+
+p {
+    font-size: 0.9375rem;
+    color: #6c757d;
+}
+
+/* Header */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 0;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.logo span {
+    color: #007bff;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+}
+
+.language-selector select {
+    border: none;
+    background: transparent;
+    font-size: 0.9375rem;
+    color: #333;
+    padding-left: 0.5rem;
+}
+
+.company-name {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.new-internship-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.new-internship-btn:hover {
+    background-color: #0056b3;
+}
+
+/* KPI Section */
+.kpi-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.kpi-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.kpi-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.kpi-icon .material-icons {
+    font-size: 2rem;
+}
+
+.kpi-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.kpi-info p {
+    margin: 0;
+}
+
+/* KPI Colors */
+.kpi-icon.active-internships { background-color: #3498db; }
+.kpi-icon.total-applications { background-color: #9b59b6; }
+.kpi-icon.shortlisted { background-color: #2c3e50; }
+.kpi-icon.rating { background-color: #f1c40f; }
+
+/* Dashboard Content */
+.dashboard-content {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.left-panel {
+    flex: 3;
+    min-width: 0;
+}
+
+.right-panel {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Your Internships Section */
+.your-internships {
+    padding-bottom: 0;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.internship-list .view-all {
+    font-size: 0.875rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.internship-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.internship-item:last-child {
+    border-bottom: none;
+}
+
+.internship-item .role {
+    font-size: 0.875rem;
+}
+
+.internship-item .stats {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.internship-item .status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+}
+
+.internship-item .status.active {
+    background-color: #e8f5e9;
+    color: #4caf50;
+}
+
+.internship-item .status.closed {
+    background-color: #fce4ec;
+    color: #e91e63;
+}
+
+.internship-item .more-vert {
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* Recent Applications Section */
+.application-list {
+    padding-top: 0.5rem;
+}
+
+.application-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.application-item:last-child {
+    border-bottom: none;
+}
+
+.applicant-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.applicant-info .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.applicant-info .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.applicant-info .details h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.applicant-info .details p {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+.application-stats {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.application-stats .match-score {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.high-match { color: #28a745; }
+.medium-match { color: #ffc107; }
+
+.application-stats .date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.view-btn {
+    background-color: #f0f4f8;
+    color: #007bff;
+    border: 1px solid #d3dbe2;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+    background-color: #e2e8f0;
+}
+
+/* Right Panel */
+.company-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.company-profile p span {
+    font-weight: 500;
+    color: #333;
+}
+
+.edit-profile-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+}
+
+.edit-profile-btn:hover {
+    background-color: #0056b3;
+}
+
+.quick-actions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quick-actions li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.quick-actions li:hover {
+    color: #007bff;
+}
+
+.quick-actions .material-icons {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.performance-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.performance-stats p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.performance-stats p span {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboard-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 1rem;
+    }
+
+    .header-container {
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .kpi-section {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-panel, .right-panel {
+        flex: auto;
+    }
+}

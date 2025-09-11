@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title data-i18n="myInternshipsTitle">My Internships</title>
+    <link rel="stylesheet" href="css/internships.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+
+<body>
+    <div id="mainOverlay" class="overlay"></div>
+    <header class="site-header">
+        <div class="container">
+            <div class="brand">
+                <div class="logo">PM<span>Intern</span></div>
+            </div>
+            <div class="actions">
+                <div class="profile-dropdown">
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="https://placehold.co/40" alt="Profile" class="profile-avatar" />
+                    </button>
+                    <div class="dropdown-content" id="profileDropdown">
+                        <a href="candidate.html" id="editProfileLink" data-i18n="editProfileLink">Edit Profile</a>
+                        <a href="#" id="internshipsLink" data-i18n="internshipsLink" class="active">Internships</a>
+                        <a href="#" id="logoutBtn" data-i18n="logout">Logout</a>
+                    </div>
+                </div>
+                <select id="langSelect" aria-label="Language">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container main">
+        <section class="internships-content">
+            <h1 data-i18n="myInternshipsHeading">My Applied Internships</h1>
+            <p data-i18n="myInternshipsText">Here you can see the list of all internships you have previously applied for.</p>
+            <div class="card-grid" id="appliedInternshipsGrid">
+                </div>
+            <div id="noInternshipsMessage" class="empty-state-message" style="display: none;">
+                <p data-i18n="noInternshipsApplied">You haven't applied for any internships yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p data-i18n="footerText">© 2025 PM Internship Recommendation — By Team Buildzen.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/internships.js"></script>
+</body>
+
+</html>

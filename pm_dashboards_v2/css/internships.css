@@ -1,0 +1,38 @@
+/* Import global styles from candidate.css to ensure consistency */
+@import url("candidate.css");
+
+/* Unique styles for the 'My Internships' page */
+.internships-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.internships-content h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.internships-content p {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.empty-state-message {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}

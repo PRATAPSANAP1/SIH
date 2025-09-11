@@ -1,0 +1,620 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* --- Utility Classes --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Header & Footer --- */
+.site-header {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 15px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #333;
+    margin-right: 10px;
+}
+
+.logo span {
+    color: #007bff;
+}
+
+.title {
+    font-size: 1.1em;
+    color: #666;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#langSelect {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.profile-btn:hover .profile-avatar {
+    border-color: #007bff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    font-size: 0.9em;
+    border-top: 1px solid #eee;
+}
+
+
+.dropdown, .ministry {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Main Content & Buttons */
+.main-content {
+    animation: fadeIn 0.8s ease-out forwards;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-title h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.main-title p {
+    margin: 5px 0 0;
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.main-buttons .btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-download {
+    background: linear-gradient(45deg, #1a73e8, #4a90e2);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.4);
+}
+
+.btn-settings {
+    background-color: #f0f2f5;
+    border: 1px solid #ccc;
+    color: #4a4a4a;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Styles */
+.kpi-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.kpi-card
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.kpi-card,
+.state-performance,
+.recent-activities,
+.card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover,
+.queue-item:hover,
+.quick-actions li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.kpi-icon {
+    font-size: 3rem;
+    height: 20px;
+    padding: 1.25rem;
+    border-radius: 10%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.internships .kpi-icon { background: linear-gradient(135deg, #2accb3, #095c9f); }
+.companies .kpi-icon { background: linear-gradient(135deg, #b7de4c, #69c500); }
+.students .kpi-icon { background: linear-gradient(135deg, #9e2cb8, #6024c7); }
+.placements .kpi-icon { background: linear-gradient(135deg, #d7561e, #cf3a0d); }
+
+.change-info
+{
+    color: #28a745;
+}
+/* State-wise Performance: Individual Cards */
+.state-performance .section-header {
+    margin-bottom: 1.5rem;
+}
+
+.state-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.state-card {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid rgb(219, 216, 216);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.state-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.state-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+}
+
+.state-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.state-info .material-icons {
+    color: #1d73e8;
+    font-size: 1.5rem;
+}
+
+.state-info h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.state-progress-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1d73e8;
+}
+
+.state-metrics {
+    margin: 0.5rem 0 1rem;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+.progress-bar-container {
+  width: 200px;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  
+}
+.prog
+{
+    display: flex;
+    justify-content: space-between;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border-radius: 4px;
+}
+
+/* Recent Activities */
+.recent-activities {
+    padding: 20px;
+}
+
+.recent-activities h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.activity-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.activity-icon {
+    font-size: 24px;
+    color: #1d73e8;
+    background-color: #e8f0fe;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.activity-details h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.activity-details p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #999;
+}
+
+/* Sidebar */
+.content-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.left-panel, .right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-sidebar .card {
+    padding: 20px;
+}
+
+.right-sidebar .card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.policy-status ul, .quick-actions ul, .system-health ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 20px;
+}
+
+.policy-status li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.policy-status li:last-child {
+    border-bottom: none;
+}
+
+.policy-status li span {
+    font-weight: bold;
+}
+
+.btn-modify {
+    width: 100%;
+    background-color: #f0f2f5;
+    border: 1px solid #ccc;
+    color: #115cc5;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Approval Queue */
+.approval-queue .queue-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-areas:
+        "title button"
+        "status button";
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+.queue-item.new-company
+{
+    background-color: rgb(254, 192, 76);
+}
+.queue-item.internship-postings
+{
+    background-color: rgb(51, 222, 51);
+}
+.queue-item h4 {
+    margin: 0;
+    font-size: 16px;
+    grid-area: title;
+}
+
+.queue-item p {
+    margin: 0;
+    color: #666;
+    font-size: 12px;
+    grid-area: status;
+}
+
+.queue-item .btn {
+    grid-area: button;
+    padding: 8px 20px;
+    font-size: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-review {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-verify {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Quick Actions & System Health */
+.quick-actions li, .system-health li {
+    padding: 10px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.quick-actions li:hover {
+    background-color: #e8f0fe;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.healthy {
+    background-color: #28a745;
+}
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    .header {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header-actions {
+        display: none;
+    }
+
+    .main-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-buttons {
+        flex-direction: column;
+    }
+
+    .main-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .kpi-section {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .kpi-info h3 {
+        font-size: 1.75rem;
+    }
+
+    .kpi-icon {
+        font-size: 2.5rem;
+        padding: 1.5rem;
+    }
+
+    .content-body {
+        grid-template-columns: 1fr; /* Stack panels on mobile */
+    }
+
+    .state-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .state-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .prog {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .progress-bar-container {
+        width: 100%;
+    }
+}
+/* Add this to your CSS file */
+.profile-dropdown .dropdown-content.show {
+    display: block;
+}

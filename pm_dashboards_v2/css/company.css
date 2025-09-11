@@ -1,0 +1,899 @@
+/* General Body and Layout */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Lighter, modern background */
+    color: #333d47; /* Darker, more professional text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll on small devices */
+}
+
+.dashboard-main {
+    padding: 2.5rem 2rem; /* Increased vertical padding */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+#langSelect {
+    display: flex;
+    align-items: center;
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+}
+
+#langSelect select {
+    border: none;
+    background: transparent;
+    font-size: 0.9375rem;
+    color: #333;
+    padding-left: 0.5rem;
+}
+#langSelect:hover {
+    border-color: #aeb8c4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+/* Add these styles to your existing index.css file */
+
+.add-internship-form {
+    display: none; /* Initially hide the form section */
+    margin-bottom: 2.5rem;
+}
+
+.add-internship-form .card {
+    padding: 2.5rem;
+}
+
+.add-internship-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.form-group input,textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #f0f4f8;
+    color: #007bff;
+    border: 1px solid #d3dbe2;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn.primary{
+   
+     background-color: #f0f4f8;
+    color: #007bff;
+    border: 1px solid #d3dbe2;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 16px; /* More rounded corners for a softer look */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Stronger, more elegant shadow */
+    padding: 1.8rem; /* Slightly more padding */
+    margin-bottom: 1.8rem; /* Consistent spacing */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+h1, h2, h3, h4 {
+    color: #212529;
+    font-weight: 600; /* Bolder headings */
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 0.5rem; } /* Larger and more space */
+h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+h3 { font-size: 1.35rem; margin-bottom: 0.75rem; }
+h4 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+
+p {
+    font-size: 1rem; /* Slightly larger paragraph text */
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* Header */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04); /* Subtle header shadow */
+    padding: 1.2rem 0; /* More padding */
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.8rem; /* Larger logo */
+    letter-spacing: -0.5px; /* Tighter letter spacing */
+}
+
+.logo span {
+    color: #007bff; /* Primary brand color */
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem; /* Increased gap */
+}
+
+.company-name {
+    font-weight: 500;
+    color: #495057; /* Slightly darker for better readability */
+    font-size: 1rem;
+}
+
+.profile-icon {
+    border: 2px solid #007bff; /* Add a subtle border */
+    border-radius: 50%;
+    width: 44px; /* Slightly larger */
+    height: 44px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.profile-icon:hover {
+    transform: scale(1.08); /* Scale up on hover */
+    border-color: #0056b3;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem; /* More space below header */
+}
+
+.dashboard-title h1 {
+    font-size: 2.8rem; /* Even larger dashboard title */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+.dashboard-title p {
+    font-size: 1.1rem;
+    color: #7b8593;
+}
+
+.new-internship-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px; /* More rounded button */
+    padding: 0.9rem 1.8rem; /* More padding for a softer button */
+    font-weight: 600;
+    font-size: 1.05rem; /* Larger font */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Button shadow */
+}
+
+.new-internship-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.new-internship-btn .material-icons {
+    font-size: 1.3rem;
+}
+
+/* KPI Section */
+.kpi-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); /* Slightly larger min-width */
+    gap: 1.8rem; /* Consistent gap */
+    margin-bottom: 3rem; /* More space */
+}
+
+.kpi-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Deeper shadow */
+    
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* More space between icon and text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-7px); /* More pronounced lift */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18); /* Stronger shadow */
+}
+
+.kpi-icon {
+    width: 65px; /* Slightly larger icon container */
+    height: 65px;
+    border-radius: 50%; /* Fully round */
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Icon specific shadow */
+}
+
+.kpi-icon .material-icons {
+    font-size: 2.2rem; /* Larger icon */
+}
+
+.kpi-info h3 {
+    font-size: 2.5rem; /* Larger KPI value */
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.kpi-info p {
+    margin: 0;
+     margin-bottom: 50px;
+    font-size: 1rem;
+    color: #7b8593;
+}
+
+/* KPI Colors - Enhanced for attractiveness */
+.kpi-icon.active-internships { background-color: #3f51b5; } /* Deeper blue */
+.kpi-icon.total-applications { background-color: #e91e63; } /* Vibrant pink */
+.kpi-icon.shortlisted { background-color: #4caf50; } /* Lush green */
+.kpi-icon.rating { background-color: #ff9800; } /* Warm orange */
+
+
+/* Dashboard Content */
+.dashboard-content {
+    display: flex;
+    gap: 2.5rem; /* More space between panels */
+    flex-wrap: wrap;
+}
+
+.left-panel {
+    flex: 3;
+    min-width: 0;
+}
+
+.right-panel {
+    flex: 1;
+    min-width: 320px; /* Slightly wider */
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* Your Internships Section */
+.your-internships {
+    padding-bottom: 0;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    padding: 0 0 0.5rem 0; /* Adjust padding for card-header within card */
+}
+
+.card-header h2 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.internship-list .view-all {
+    font-size: 0.95rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.internship-list .view-all:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.internship-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0; /* More vertical padding */
+    border-bottom: 1px solid #ebf0f5; /* Lighter border */
+}
+
+.internship-item:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.internship-item h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.internship-item .role {
+    font-size: 0.95rem;
+    color: #5a6a7c;
+    margin-bottom: 0.2rem;
+}
+
+.internship-item .stats {
+    font-size: 0.85rem;
+    color: #8b9bb0;
+}
+
+.internship-item .status {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 1rem; /* More padding */
+    border-radius: 20px; /* Fully rounded pill shape */
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.internship-item .status.active {
+    background-color: #e6ffed; /* Light green background */
+    color: #28a745; /* Darker green text */
+}
+
+.internship-item .status.closed {
+    background-color: #ffe6e6; /* Light red background */
+    color: #dc3545; /* Darker red text */
+}
+
+.internship-item .more-vert {
+    color: #aeb8c4;
+    cursor: pointer;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.internship-item .more-vert:hover {
+    background-color: #f0f2f5;
+}
+
+/* Recent Applications Section */
+.application-list {
+    padding-top: 0.8rem;
+}
+
+.application-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0; /* Consistent vertical padding */
+    border-bottom: 1px solid #ebf0f5;
+}
+
+.application-item:last-child {
+    border-bottom: none;
+}
+
+.applicant-info {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem; /* More space */
+}
+
+.applicant-info .avatar {
+    width: 55px; /* Larger avatar */
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.applicant-info .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.applicant-info .details h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #212529;
+}
+
+.applicant-info .details p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #7b8593;
+}
+
+.application-stats {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem; /* Consistent gap */
+}
+
+.application-stats .match-score {
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+.high-match {
+    color: #28a745;
+    background-color: #e6ffed;
+}
+
+/* Medium match not used but good to define if needed */
+.medium-match {
+    color: #ffc107;
+    background-color: #fff3cd;
+}
+
+.application-stats .date {
+    font-size: 0.85rem;
+    color: #8b9bb0;
+    white-space: nowrap;
+}
+
+.view-btn {
+    background-color: #e9f0f7; /* Lighter background */
+    color: #007bff;
+    border: 1px solid #cfe2f7; /* Subtle border */
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem; /* More padding */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.view-btn:hover {
+    background-color: #dbeaff; /* Lighter blue on hover */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Right Panel */
+.company-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.company-profile h2 {
+    margin-bottom: 1.2rem;
+}
+
+.company-profile p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #5a6a7c;
+}
+
+.company-profile p span {
+    font-weight: 600;
+    color: #333d47;
+}
+
+.edit-profile-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.edit-profile-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.quick-actions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* More space between actions */
+}
+
+.quick-actions h2 {
+    margin-bottom: 1.2rem;
+}
+
+.quick-actions li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #5a6a7c;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    padding: 0.5rem 0;
+}
+
+.quick-actions li:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+.quick-actions .material-icons {
+    font-size: 1.3rem; /* Slightly larger icon */
+    color: #9da8b6;
+    transition: color 0.2s ease;
+}
+
+.quick-actions li:hover .material-icons {
+    color: #007bff;
+}
+
+.performance h2 {
+    margin-bottom: 1.2rem;
+}
+
+.performance-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.performance-stats p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed #ebf0f5; /* Dashed border for a lighter feel */
+}
+
+.performance-stats p:last-child {
+    border-bottom: none;
+}
+
+.performance-stats p span:first-child {
+    font-size: 0.95rem;
+    color: #5a6a7c;
+}
+
+.performance-stats p span:last-child {
+    font-weight: 700;
+    color: #212529;
+    font-size: 1.05rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .dashboard-main, .header-container {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboard-content {
+        flex-direction: column;
+        gap: 2rem; /* Reduced gap for smaller screens */
+    }
+    .left-panel, .right-panel {
+        flex: auto; /* Allow panels to take full width */
+        min-width: unset;
+    }
+    .kpi-section {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust KPI grid */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-main {
+        padding: 1rem;
+    }
+
+    .header-container {
+        padding: 0 1rem;
+        flex-direction: column; /* Stack header elements */
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .header-nav {
+        width: 100%; /* Full width for nav */
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .company-name {
+        display: none; /* Hide company name on very small screens */
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .dashboard-title h1 {
+        font-size: 2rem;
+    }
+    .dashboard-title p {
+        font-size: 0.95rem;
+    }
+
+    .new-internship-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .kpi-section {
+        grid-template-columns: 1fr; /* Single column for KPIs */
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .kpi-card {
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+    .kpi-icon {
+        width: 55px;
+        height: 55px;
+    }
+    .kpi-icon .material-icons {
+        font-size: 1.8rem;
+    }
+    .kpi-info h3 {
+        font-size: 2rem;
+    }
+    .kpi-info p {
+        font-size: 0.9rem;
+    }
+
+    .internship-item, .application-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding: 1rem 0;
+    }
+    .application-stats {
+        flex-wrap: wrap; /* Wrap application stats on small screens */
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .internship-item .more-vert {
+        margin-left: auto; /* Push to the right */
+    }
+    .view-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
+    h4 { font-size: 1rem; }
+    p { font-size: 0.875rem; }
+
+    .header-container {
+        gap: 0.8rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    #langSelect {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .profile-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .new-internship-btn {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+
+    .card {
+        padding: 1.2rem;
+        border-radius: 12px;
+    }
+
+    .kpi-card {
+        padding: 1rem;
+    }
+    .kpi-icon {
+        width: 48px;
+        height: 48px;
+    }
+    .kpi-icon .material-icons {
+        font-size: 1.5rem;
+    }
+    .kpi-info h3 {
+        font-size: 1.8rem;
+    }
+}
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: none;
+    border: 4px solid blue;
+    cursor: pointer;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-btn:hover {
+    transform: scale(1.08);
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    top: 55px;
+}
+
+.dropdown-content a {
+    color: #333d47;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f2f5;
+}
+
+.profile-dropdown.active .dropdown-content {
+    display: block;
+}
+
+.btn.primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    /* other styles like background-color, box-shadow, z-index */
+}
+
+.dropdown-content.show {
+    display: block;
+}
