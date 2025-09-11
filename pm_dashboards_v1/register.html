@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title data-i18n="registerHeading">Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/register.css" />
 </head>
 
@@ -13,7 +14,6 @@
         <div class="container">
             <div class="brand">
                 <div class="logo">PM<span>Intern</span></div>
-                <div class="title" data-i18n="pageTitle">PM Internship Recommendation</div>
             </div>
             <div class="actions">
                 <select id="langSelect" aria-label="Language">
@@ -27,13 +27,12 @@
     <main class="container main">
         <div class="card register-card">
             <h2 data-i18n="registerHeading">Register</h2>
-            <form id="registerForm">
+            <form id="registerForm" novalidate>
                 <label>
                     <span data-i18n="roleLabel">Role</span>
                     <select id="roleSelect">
                         <option value="candidate" data-i18n="candidate">Candidate</option>
                         <option value="company" data-i18n="company">Company</option>
-                        <option value="government" data-i18n="government">Government</option>
                     </select>
                 </label>
                 <label>
@@ -44,7 +43,6 @@
                     <span data-i18n="idLabel">Email or Mobile</span>
                     <input id="userId" data-i18n="emailMobilePlaceholder" placeholder="email or mobile" required />
                 </label>
-
                 <div id="candidateFields">
                     <h3 class="form-section-heading" data-i18n="professionalDetails">Professional Details</h3>
                     <label>
@@ -60,12 +58,12 @@
                     <label>
                         <span data-i18n="educationLevelLabel">Education Level</span>
                         <select id="educationLevel">
-                            <option value="">Select Level</option>
-                            <option value="10th">10th Pass</option>
-                            <option value="12th">12th Pass</option>
-                            <option value="diploma">Diploma</option>
-                            <option value="graduate">Graduate</option>
-                            <option value="postgraduate">Postgraduate</option>
+                            <option value="" data-i18n="selectLevel">Select Level</option>
+                            <option value="10th" data-i18n="tenthPass">10th Pass</option>
+                            <option value="12th" data-i18n="twelfthPass">12th Pass</option>
+                            <option value="diploma" data-i18n="diploma">Diploma</option>
+                            <option value="graduate" data-i18n="graduate">Graduate</option>
+                            <option value="postgraduate" data-i18n="postgraduate">Postgraduate</option>
                         </select>
                     </label>
                     <label>
@@ -89,12 +87,43 @@
 
                     <h3 class="form-section-heading" data-i18n="workExperienceLabel">Work Experience</h3>
                     <div id="workExperienceContainer">
-                        </div>
-                    <button type="button" id="addWorkExperienceBtn" class="btn secondary">Add New Experience</button>
-
+                    </div>
+                    <button type="button" id="addWorkExperienceBtn" class="btn secondary" data-i18n="addExperience">Add New Experience</button>
+<br><br>
                     <label>
                         <span data-i18n="locationPreferenceLabel">Location Preference</span>
                         <input type="text" id="locationPreference" placeholder="e.g., Pune, Bengaluru" />
+                    </label>
+                </div>
+
+                <div id="companyFields" class="hidden">
+                    <h3 class="form-section-heading" data-i18n="companyDetails">Company Details</h3>
+                    <label>
+                        <span data-i18n="companyNameLabel">Company Name</span>
+                        <input type="text" id="companyName" placeholder="e.g., Innovate Solutions Inc." />
+                    </label>
+                    <label>
+                        <span data-i18n="companySizeLabel">Company Size</span>
+                        <select id="companySize">
+                            <option value="" data-i18n="selectSize">Select Size</option>
+                            <option value="1-10" data-i18n="size1">1-10 employees</option>
+                            <option value="11-50" data-i18n="size2">11-50 employees</option>
+                            <option value="51-200" data-i18n="size3">51-200 employees</option>
+                            <option value="201-1000" data-i18n="size4">201-1000 employees</option>
+                            <option value="1000+" data-i18n="size5">1000+ employees</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span data-i18n="industryLabel">Industry</span>
+                        <input type="text" id="industry" placeholder="e.g., Technology, Healthcare" />
+                    </label>
+                    <label>
+                        <span data-i18n="websiteUrlLabel">Website URL</span>
+                        <input type="url" id="websiteUrl" placeholder="e.g., https://innovate-solutions.com" />
+                    </label>
+                    <label>
+                        <span data-i18n="contactPersonLabel">Contact Person</span>
+                        <input type="text" id="contactPerson" placeholder="e.g., Jane Doe" />
                     </label>
                 </div>
 
@@ -112,7 +141,7 @@
             <div class="form-switch">
                 <p>
                     <span data-i18n="haveAccountText">Already have an account?</span>
-                    <a href="login.html" data-i18n="loginLink">Login here</a>
+                    <a href="/login.html" data-i18n="loginLink">Login here</a>
                 </p>
             </div>
         </div>
@@ -121,17 +150,9 @@
     <footer class="footer">
         <p data-i18n="footerText">© 2025 PM Internship Recommendation — By Team Buildzen.</p>
     </footer>
+<script type="module" src="js/common.js"></script>
+<script type="module" src="js/register.js"></script>
 
-    <div id="customModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <p id="modalMessage"></p>
-            <button class="btn primary" onclick="document.getElementById('customModal').style.display='none'">OK</button>
-        </div>
-    </div>
-
-    <script src="js/common.js"></script>
-    <script src="js/register.js"></script>
 </body>
 
 </html>
